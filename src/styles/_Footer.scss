@@ -1,0 +1,44 @@
+.footer{
+    background-color: $darkblue;padding-top:70px;overflow: hidden;
+    @media(max-width:767px){padding-top: 30px;}
+    h6{color: $white;margin-bottom: 20px;}
+    p{color: $lightgrey;font-size: 16px;margin-bottom: 15px;}
+    .social-media-list{
+        display: flex;
+        li{list-style: none;
+            a{color: $lightgrey;font-size: 18px;margin-right: 10px;
+                i{color: $lightgrey;}
+                &:hover{
+                    color: $color;
+                    i{color: $color;}
+                }
+            }
+        }
+    }
+    .footer-list{
+        display: flex;flex-wrap: wrap;list-style: none;padding: 0;
+        li{
+            flex: 0 0 calc(50% - 10px); margin-right: 10px; 
+            &:nth-child(2n){margin-right: 0;}
+            a{font-size: 16px;color: $lightgrey;margin-bottom: 10px;
+                &:hover{color: $color;}
+            }
+        }
+    }
+    form{
+        display: flex;justify-content: space-between;margin-bottom:30px;
+        input{height: 38px;width: calc(100% - 50px);}
+        button{background-color: transparent;border: none;outline: none;padding: 0;
+            img{height: 38px;}
+            &:hover{background-color: transparent;}
+        }
+    }
+    .footer-bottom{
+        padding-bottom:30px;padding-top: 30px;border-top: 1px solid rgba(255,255,255,0.1);
+        p{margin: 0;}
+    }
+    &.animate{
+        p,ul li,form,.footer-bottom{  @include trans;@include animation-anime(transdown, 1s, linear);}
+        h6{  @include trans;@include animation-anime(transup, 1s, linear);}
+    }   
+}

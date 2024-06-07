@@ -1,0 +1,51 @@
+.reg-btn{
+    background-color: $color;font-size: 16px;font-weight: 500;
+    color: $white;border: none;padding:5px 20px;border-radius: 5px;border: 2px solid $color;
+    i{color: $white;@include trans;position: relative;}
+    &:hover{background-color: $color; 
+        box-shadow: $box-shadow;border-color:$color;
+        i{right: -5px;}
+    }
+    &:disabled{background-color: $color; 
+        box-shadow: $box-shadow;border-color:$color;
+        i{right: -5px;}
+    }
+    @media(max-width:575px){font-size: 14px;padding:6px 15px;}
+    &.mid{
+        padding: 11px 18px;
+    }
+    &.trans{
+        background-color: transparent;color: $color;border-color: $color;border: 2px solid;
+    }
+    &.empty{padding: 0;background-color: transparent;border: none;
+        &:hover{box-shadow: none;}
+    }
+}
+
+.dropdown{
+    &.trans{
+        button{background-color: transparent;}
+    }
+    &.red{
+        button{border-color: $color;    color: $color;font-weight: 500;
+            i{color: $color;}
+            &::after{display: none;}
+            &:hover{background-color: $color;color: $white;
+                box-shadow: $box-shadow;
+                i{color: $white;}
+            }
+        }
+    }
+    .dropdown-menu{
+        padding: 0;border:1px solid $color;
+        a{color: $color;padding:7px 10px;font-size:14px;
+            &:hover{
+                background-color: $color;color: $white;
+            }
+        }
+    }
+}
+.gradient-btn{
+    background: $gradient; padding: 11.5px;border-radius: 10px;
+    color: $white;width: 100%;font-weight: 600;font-size: 14px;border: none;
+}
